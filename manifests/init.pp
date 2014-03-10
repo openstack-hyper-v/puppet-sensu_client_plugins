@@ -5,7 +5,7 @@
 #
 
 class sensu_client_plugins (
-  $repos = {},
+  $repos = hiera('sensu_client_plugins::repos',{}),
 ){
 
   case $::osfamily {
