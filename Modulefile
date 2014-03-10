@@ -1,0 +1,11 @@
+name    'puppet-sensu_client_plugins'
+version '0.0.1'
+project_page 'https://github.com/openstack-hyper-v/puppet-sensu_client_plugins'
+source 'https://github.com/openstack-hyper-v/puppet-sensu_client_plugins'
+author 'Timothy Rogers'
+license 'Apache License, Version 2.0'
+summary ''
+description ''
+
+dependency 'puppetlabs/vcsrepo'
+dependency 'puppetlabs/stdlib'
