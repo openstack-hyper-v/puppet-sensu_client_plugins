@@ -23,11 +23,15 @@ class sensu_client_plugins (
     }
   }
 
-  file {$locations["checkout_loc"]:
-    ensure => directory,
+  if !defined(File [$locations["checkout_loc"]]) {
+    file {$locations["checkout_loc"]:
+      ensure => directory,
+    }
   }
-  file {$locations["sensu_plugins_loc"]:
-    ensure => directory,
+  if !defined(File [$locations["sensu_plugins_loc"]]) {
+    file {$locations["sensu_plugins_loc"]:
+      ensure => directory,
+    }
   }
 
   create_resources("sensu_plugin_repo", $repos, $locations)
