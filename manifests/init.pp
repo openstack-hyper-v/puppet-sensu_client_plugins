@@ -45,7 +45,7 @@ define sensu_plugin_repo (
 ){
   vcsrepo {$repo_name:
     ensure      => 'latest',
-    revision    => 'origin/HEAD',
+    revision    => 'origin/master',
     path        => "${checkout_loc}/${repo_name}",
     source      => $repo_source,
     provider    => 'git',
